@@ -320,7 +320,7 @@ th {
 
 .store {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
+  grid-template-columns: 1fr;
   gap: 20px;
   align-items: stretch;
 }
