@@ -49,18 +49,18 @@ defineProps({
   }
 })
 
-const getTomorrowAtEight = () => {
+const getTomorrowAtNine = () => {
   const now = new Date()
-  const tomorrowAtEight = new Date(now)
-  tomorrowAtEight.setDate(now.getDate() + 1)
-  tomorrowAtEight.setHours(8, 0, 0, 0)
+  const tomorrowAtNine = new Date(now)
+  tomorrowAtNine.setDate(now.getDate() + 1)
+  tomorrowAtNine.setHours(9, 0, 0, 0)
 
   const pad = (num) => String(num).padStart(2, '0')
-  const year = tomorrowAtEight.getFullYear()
-  const month = pad(tomorrowAtEight.getMonth() + 1)
-  const day = pad(tomorrowAtEight.getDate())
-  const hours = pad(tomorrowAtEight.getHours())
-  const minutes = pad(tomorrowAtEight.getMinutes())
+  const year = tomorrowAtNine.getFullYear()
+  const month = pad(tomorrowAtNine.getMonth() + 1)
+  const day = pad(tomorrowAtNine.getDate())
+  const hours = pad(tomorrowAtNine.getHours())
+  const minutes = pad(tomorrowAtNine.getMinutes())
 
   return `${year}-${month}-${day}T${hours}:${minutes}`
 }
@@ -69,7 +69,7 @@ const form = reactive({
   name: '',
   pet: '狗狗',
   service: '基础洗护',
-  appointmentTime: getTomorrowAtEight(),
+  appointmentTime: getTomorrowAtNine(),
   phone: '',
   note: ''
 })
