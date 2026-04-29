@@ -6,6 +6,7 @@
     <ServicesSection :services="services" />
     <PricingSection :pricing-rows="pricingRows" />
     <GallerySection :slides="gallerySlides" />
+    <TestimonialsSection :testimonials="testimonials" />
     <StoreSection />
     <BookingSection :service-options="serviceOptions" />
   </main>
@@ -19,6 +20,7 @@ import HeroSection from './components/HeroSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import PricingSection from './components/PricingSection.vue'
 import GallerySection from './components/GallerySection.vue'
+import TestimonialsSection from './components/TestimonialsSection.vue'
 import StoreSection from './components/StoreSection.vue'
 import BookingSection from './components/BookingSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
@@ -26,6 +28,7 @@ import SiteFooter from './components/SiteFooter.vue'
 const navLinks = [
   { href: '#services', label: '服务' },
   { href: '#gallery', label: '环境' },
+  { href: '#testimonials', label: '评价' },
   { href: '#pricing', label: '价格' },
   { href: '#store', label: '门店' },
   { href: '#booking', label: '预约' }
@@ -74,6 +77,24 @@ const gallerySlides = [
     src: 'https://images.pexels.com/photos/5731866/pexels-photo-5731866.jpeg?auto=compress&cs=tinysrgb&w=1600',
     alt: '美容修剪区实拍图',
     caption: '美容修剪区：透明可视，造型前先沟通'
+  }
+]
+
+const testimonials = [
+  {
+    name: '李女士',
+    pet: '柴犬「团子」',
+    text: '美容师特别耐心，沟通得很细，做完造型后毛发顺滑又蓬松。'
+  },
+  {
+    name: '周先生',
+    pet: '英短「奶糖」',
+    text: '猫咪平时怕生，这次洗护过程很安静，回家后状态也很好。'
+  },
+  {
+    name: '王小姐',
+    pet: '比熊「泡芙」',
+    text: '预约方便，到店几乎不用等，修剪效果和我给的参考图很接近。'
   }
 ]
 
