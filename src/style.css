@@ -293,6 +293,41 @@ section {
   transform: scale(1.15);
 }
 
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.testimonial {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-text {
+  color: #4b4640;
+  margin-bottom: 12px;
+  min-height: 72px;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-meta strong {
+  color: var(--ink);
+}
+
+.testimonial-meta span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -503,6 +538,10 @@ footer {
 
   .services {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
   }
 
   .slide img {
