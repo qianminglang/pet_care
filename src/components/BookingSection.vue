@@ -6,10 +6,13 @@
       <div class="tip" style="margin-top: 14px;">
         营业时间：周一至周日 10:00 - 21:00<br />
         门店地址：幸福路 88 号（示例）<br />
-        客服电话：400-123-8888
+        客服电话：400-123-88888
       </div>
     </div>
     <form @submit.prevent>
+      <label for="appointmentTime">预约时间</label>
+      <input id="appointmentTime" v-model="form.appointmentTime" type="datetime-local" />
+
       <label for="name">主人姓名</label>
       <input id="name" v-model="form.name" type="text" placeholder="请输入姓名" />
 
@@ -24,9 +27,6 @@
       <select id="service" v-model="form.service">
         <option v-for="option in serviceOptions" :key="option" :value="option">{{ option }}</option>
       </select>
-
-      <label for="appointmentTime">预约时间</label>
-      <input id="appointmentTime" v-model="form.appointmentTime" type="datetime-local" />
 
       <label for="phone">联系电话</label>
       <input id="phone" v-model="form.phone" type="tel" placeholder="请输入手机号" />
